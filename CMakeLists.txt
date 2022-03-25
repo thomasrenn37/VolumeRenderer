@@ -5,13 +5,13 @@ project(astro)
 find_package(VTK REQUIRED)
 
 if (NOT VTK_FOUND)
-  message("Skipping CylinderExample: ${VTK_NOT_FOUND_MESSAGE}")
+  message("${VTK_NOT_FOUND_MESSAGE}")
   return()
 endif()
 message (STATUS "VTK_VERSION: ${VTK_VERSION}")
 if (VTK_VERSION VERSION_LESS "8.90.0")
   # old system
-  message("Not sure if this CMakeLists.txt file will work with a lesser VTK version.")
+  message("Incorrect VTK version. Please update to at least version 8.90.0")
   return()
 else()
   # Prevent a "command line is too long" failure in Windows.

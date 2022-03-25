@@ -453,6 +453,7 @@ int main(int argc, char** argv)
 
     cerr << "Volume render of input file saved as output.txt in same the directory " << endl;
 
+    rgrid->Delete();
 
     exit(EXIT_SUCCESS);
 }
